@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+body{
+  background: linear-gradient(90deg, rgb(136, 166, 201) 0%, rgb(138, 148, 255) 50%);
+  color: white;
+  font-family: Righteous, sans-serif;
+}
+
+*{
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  color: white;
+  align-items: center;
+  margin-left: 15px;
+
+
+}
+
+.lista-des ul {
+  display: flex;
+  gap: 20px;
+
+}
+
+.lista-des ul li {
+  list-style: none;
+  text-transform: uppercase;
+
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.lista-des ul li:hover{
+  transform: scale(1.1);
+  transition: all 0.5s;
+  
+  
+}
+
+
+.jig {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+.Logo {
+  width: 100px;
+}
+
+span {
+  color: white;
+}
+
+.contenedor-BUL{
+  display: flex;
+  align-items: center;
+  margin-left: 15%;
+
+}
+.login{
+  color: white;
+  
+}
+
+.barraBusqueda{
+  margin-left: 10%;
+  display: contents;
+}
+
+.usuario{
+  width: 50px;
+ margin-left: 2%;
+  
+
+}
+
+.usuario:hover{
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+
+.login-active:hover{
+  transform: scale(1.2);
+  transition: all 0.5s;
+
+}
+.img-icono {
+  width: 100%;
+  border-radius: 100%;
+
+
+}
+
+.login-active{
+  margin-left: 5%;
+}
+
+
+.escaparate {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px 0;
+}
+
+.imagen-producto {
+  flex-basis: 40%;
+  margin-left: 45px;
+}
+
+.imagen-producto img {
+  max-width: 100%;
+}
+
+.detalles-producto {
+  flex-basis: 60%;
+  padding: 0 20px;
+}
+
+.detalles-producto h2 {
+  margin-top: 0;
+}
+
+.detalles-producto .precio {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.detalles-producto button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.detalles-producto button:hover {
+  background-color: #0062cc;
+}
+
+@media (min-width:1650px ) {
+  .contenedor-BUL{
+      display: flex;
+      justify-content: space-evenly;
+      margin-left: 25%
+      
+  }
+ 
+  
+  
+}

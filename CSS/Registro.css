@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+body {
+  width: 100%;
+  background: #4bc2f9;
+  /* fallback for old browsers */
+  background: linear-gradient(90deg, rgb(136, 166, 201) 0%, rgb(138, 148, 255) 50%);
+  font-family: Righteous, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  text-decoration: none;
+}
+
+.Perfil{
+    color: white;
+}
+span{
+  color: white;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  color: white;
+  align-items: center;
+  gap: 25px;
+}
+
+.lista-des ul {
+  display: flex;
+  gap: 20px;
+}
+
+.lista-des ul li {
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.jig {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.Logo {
+  width: 100px;
+}
+
+.contenedor {
+  height: 200px;
+
+}
+
+
+/* Título del formulario */
+.Perfil {
+  text-align: center;  
+  font-family: 'Playfair Display', Arial, sans-serif;
+  color: black;
+}
+
+form {
+    padding-top: 1rem;
+}
+
+
+form ul {
+    background: #4bc2f9; /* fallback for old browsers */
+    background: rgb(111, 121, 194);
+    background: linear-gradient(90deg, rgb(136, 166, 201) 0%, rgb(138, 148, 255) 50%);
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;  
+
+    list-style: none;
+}
+
+/* Placehoder */
+::placeholder {
+    color: green;
+}
+
+/* Selección de texto dentro de los campo */
+::selection {
+    color: white;
+    background-color: green;
+}
+
+/* Los campos */
+input,
+output,
+button {
+    /* Para que el texto sea más pequeño */
+    font-size: .9rem;
+    /* Para que el texto no quede tan pegado al borde del input */
+    padding: .3rem;
+}
+
+/* Botones */
+button {
+    background: #026aa7;
+    box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.2);
+    padding: .5rem 1rem;
+    color: #DDD;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.6), 0 0 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+    box-shadow: inset 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Opciones */
+option {
+    font-size: .9rem;
+    padding: 5px 1rem;
+}
+
+/* Los inputs numéricos deben mostrar el texto alineado a la derecha */
+input[type="number"] {
+    text-align: right;
+}
+
+/* Los campos no válidos se muestran con el borde y el fondo de color rojo */
+:invalid:not(form) {
+    background-color: #FFEDED;
+    border: 1px solid red;
+    outline: none;
+}
+
+/* Cuando un input no válido recibe el foco se muestra una sombra roja */
+:invalid:focus {
+    box-shadow: 0 0 5px red;
+    outline: none;
+}
+
+/* Fila del formulario */
+.fila {
+    margin-bottom: 2rem;
+    /* Caja flexible con hijos formando filas */
+    display: flex;
+    flex-wrap: wrap;
+    /* Para que en cada fila se alinee verticalmente al centro */
+    align-items: center;
+    /* Para poder posicionar los mensajes de error de forma absoluta respecto a la fila */
+    position: relative;
+}
+
+/* Labels de propiedades */
+.propiedad {
+    /* Para que esté centrado horizontalmente dentro de la fila hacemos que su ancho mínimo sea el 50% y alineamos su texto a la derecha */
+    min-width: 50%;
+    text-align: right;
+    padding-right: 1rem;
+    /* Para que el label se sitúe antes de los input le damos un orden menor de 0 */
+    order: -1;
+}
+
+/* El label de propiedad cuyo campo tiene el foco o está activado */
+:focus~.propiedad,
+:active~.propiedad {
+    font-weight: bold;
+}
+
+/* La propiedad cuyo campo no está vacío, tiene el foco o está activado y es válido */
+:valid:focus:not(:placeholder-shown)~.propiedad,
+.fila :valid:active:not(:placeholder-shown)~.propiedad {
+    color: teal;
+}
+
+/* La propiedad cuyo campo tiene el foco o está activado y no es válido */
+.fila :invalid:focus~.propiedad,
+.fila :invalid:active~.propiedad {
+    color: red;
+}
+
+/* Si hay más de un elemento en la fila se deja
+un margen a la izquierda (menos en la propiedad) */
+.fila>*:not(.propiedad) {
+    margin-right: 1rem;
+}
+
+/* Las propiedad correspondientes a select múltiples */
+.fila select[multiple]~.propiedad {
+    align-self: flex-start;
+}
+
+/* La fila de botones */
+.botonera {
+    /* Centrados en una fila */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Los campos pequeños */
+.small {
+    width: 3rem;
+}
+
+/* Las propiedades de campos válidos con validación que no estén vacíos deben mostrar un icono de aceptación antes */
+:required:valid:not(:placeholder-shown)~.propiedad:before,
+input[type="email"]:valid:not(:placeholder-shown)~.propiedad:before,
+input[type="url"]:valid:not(:placeholder-shown)~.propiedad:before,
+input[type="tel"]:valid:not(:placeholder-shown)~.propiedad:before {
+    content: "\2713";
+    color: teal;
+    vertical-align: middle;
+    display: inline;
+    padding-right: .5rem;
+}
+
+/* Las propiedades de campos inválidos deben mostrar un icono de error antes */
+:invalid~.propiedad:before {
+    content: "\26A0";
+    color: red;
+    vertical-align: middle;
+    display: inline;
+    padding-right: .5rem;
+}
+
+/* Las propiedades de campos inválidos deben mostrar un mensaje de valor incorrecto debajo del campo. */
+:invalid~.propiedad:after {
+    content: "Valor incorrecto";
+    color: red;
+    font-size: .8rem;
+    /* Se posiciona de forma absoluta respecto a la fila para colocarlo debajo de input */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    text-align: left;
+}
+
+/* Mensaje de error para los campos obligatorios */
+:required:invalid~.propiedad:after {
+    content: "Campo obligatorio";
+}
+
+/* Mensaje de error para email no válido */
+input[type="email"]:invalid~.propiedad:after {
+    content: "El email debe llevar @ y .";
+}
+
+/* Mensaje de error para teléfono no válido */
+input[type="tel"]:invalid~.propiedad:after {
+    content: "El teléfono debe ser numérico, contener  9 dígitos y comenzar por 6, 7, 8 o 9";
+}
+
+/* Mensaje de error para URL no válida */
+input[type="url"]:invalid~.propiedad:after {
+    content: "La URL debe comenzar por http:// y contener al menos un nombre de dominio";
+}
+
+/* Mensaje de error para número de hermanos no válido */
+#hermanos:invalid~.propiedad:after {
+    content: "Debe estar entre 1 y 50";
+}
+
+/* Media queries */
+@media (max-width: 720px) {
+
+    /* Los li alinean su hijos al comienzo */
+    .fila {
+        justify-content: flex-start;
+    }
+
+    /* Los labels ocupan toda la fila */
+    .fila .propiedad {
+        flex-basis: 100%;
+        text-align: left;
+        margin-bottom: .3rem;
+    }
+
+    /* Las propiedades de campos no válidos deben mostrar un mensaje de valor incorrecto debajo del campo. */
+    :invalid~.propiedad:after {
+        left: 0;
+    }
+}
+
